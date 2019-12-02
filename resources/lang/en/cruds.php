@@ -1,0 +1,123 @@
+<?php
+
+return [
+    'userManagement' => [
+        'title'          => 'User management',
+        'title_singular' => 'User management',
+    ],
+    'permission'     => [
+        'title'          => 'Permissions',
+        'title_singular' => 'Permission',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => '',
+            'title'             => 'Title',
+            'title_helper'      => '',
+            'created_at'        => 'Created at',
+            'created_at_helper' => '',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => '',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => '',
+        ],
+    ],
+    'role'           => [
+        'title'          => 'Roles',
+        'title_singular' => 'Role',
+        'fields'         => [
+            'id'                 => 'ID',
+            'id_helper'          => '',
+            'title'              => 'Title',
+            'title_helper'       => '',
+            'permissions'        => 'Permissions',
+            'permissions_helper' => '',
+            'created_at'         => 'Created at',
+            'created_at_helper'  => '',
+            'updated_at'         => 'Updated at',
+            'updated_at_helper'  => '',
+            'deleted_at'         => 'Deleted at',
+            'deleted_at_helper'  => '',
+        ],
+    ],
+    'user'           => [
+        'title'          => 'Users',
+        'title_singular' => 'User',
+        'fields'         => [
+            'id'                       => 'ID',
+            'id_helper'                => '',
+            'name'                     => 'Name',
+            'name_helper'              => '',
+            'email'                    => 'Email',
+            'email_helper'             => '',
+            'email_verified_at'        => 'Email verified at',
+            'email_verified_at_helper' => '',
+            'password'                 => 'Password',
+            'password_helper'          => '',
+            'roles'                    => 'Roles',
+            'roles_helper'             => '',
+            'remember_token'           => 'Remember Token',
+            'remember_token_helper'    => '',
+            'created_at'               => 'Created at',
+            'created_at_helper'        => '',
+            'updated_at'               => 'Updated at',
+            'updated_at_helper'        => '',
+            'deleted_at'               => 'Deleted at',
+            'deleted_at_helper'        => '',
+        ],
+    ],
+	'quiz' => [
+		'title'          => 'Quizzes',
+        'title_singular' => 'Quiz',
+	],
+	'userAction' => [
+		'title'          => 'User actions',
+        'title_singular' => 'User action',
+		'fields'         => [
+			'user'         => 'User',
+			'action'       => 'Action',
+			'action_model' => 'Action model',
+			'action_id'    => 'Action id',
+		],
+	],
+    'test' => [
+        'new' => 'New Quiz',
+    ],
+	'topic' => [
+		'title'          => 'Topics',
+        'title_singular' => 'Topic',
+		'fields'         => [
+			'title' => 'Title',
+		],
+	],
+	'question' => [
+		'title'          => 'Questions',
+        'title_singular' => 'Question',
+		'fields'         => [
+			'topic'              => 'Topic',
+			'question_text'      => 'Question text',
+			'code_snippet'       => 'Code snippet',
+			'answer_explanation' => 'Answer explanation',
+			'more_info_link'     => 'More info link',
+		],
+	],
+	'questionsOption' => [
+		'title'          => 'Questions Options',
+        'title_singular' => 'Questions Option',
+		'fields'         => [
+			'question' => 'question',
+			'option'   => 'Option',
+			'correct'  => 'Correct',
+		],
+	],
+	'result' => [
+		'title'          => 'My Results',
+        'title_singular' => 'My Result',
+		'fields'         => [
+			'user'     => 'User',
+			'question' => 'Question',
+			'correct'  => 'Correct',
+			'date'     => 'Date',
+			'result'   => 'Score',
+		],
+	],
+];
