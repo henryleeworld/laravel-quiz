@@ -2,24 +2,12 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use App\Question;
 use App\QuestionsOption;
-use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        Question::deleting(function ($question) {
-            $question->options()->delete();
-        });
-    }
-
     /**
      * Register any application services.
      *
@@ -30,5 +18,17 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() !== 'production') {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         }
+    }
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Question::deleting(function ($question) {
+            $question->options()->delete();
+        });
     }
 }
